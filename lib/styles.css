@@ -1,0 +1,83 @@
+/*#4c4c4c
+  #cccccc
+  #999999
+  #101010
+  #dedede*/
+  
+  body {
+    font-family: "Cabin", sans-serif;;
+  }
+  
+  .header {
+    background-color: #101010;
+  }
+  
+  h1 {
+    font-size: 50px;
+    color: #dedede;
+    padding: 20px 20px 10px;
+  }
+    
+  .searchInput {
+    height: 30px;
+    margin: 10px 5px 20px;
+  }
+  
+  .searchSubmit {
+    height: 35px;
+    margin: 10px 5px 20px;
+
+    border: none;
+    background-color: #DEDEDE;
+    color: #101010;
+    font-family: "Cabin", sans-serif;
+  }
+  
+  .present {
+    background-color: #4C4C4C;
+    color: #DEDEDE;
+    padding: 20px 20px 15px;
+    /*margin: 10px;*/
+    font-family: "Cabin", sans-serif;
+  }
+  
+  .cityName {
+    font-size: 20px;
+  }
+  
+  .tempGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+  }
+  
+  .currentTemp {
+    font-size: 50px;
+  }
+  
+  .longCond {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  
+  .sevenHourSection {
+    background-color: #999999;
+    padding: 10px 0px 10px;
+  }
+  
+  .sevenHourCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DEDEDE;
+    margin: 0px 0px 15px;
+    padding: 5px 20px;
+    color: #4C4C4C;
+  }
+  
+  img {
+    height: 35px;
+    
+  }
+  
