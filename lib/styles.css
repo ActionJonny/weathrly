@@ -92,7 +92,7 @@
     
   }
   
-  .sevenHourCard {
+  .sevenHourCard, .tenDayCard {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,6 +103,34 @@
   
   img {
     height: 35px;
-    
   }
   
+  .tenDayButton {
+    width: 100%;
+    height: 40px;
+    background-color: #4c4c4c;
+    border: none;
+    font-size: 20px;
+    color: #DEDEDE;
+    outline: none;
+  }
+
+  .tenDayButton:hover {
+    cursor: pointer;
+  }
+
+  .tenDaySection {
+    display: none;
+  }
+
+  .tenDayCardDate {
+    width: 20%;
+  }
+
+  .tenDayCardImage {
+    padding-left: 5%;
+  }
+
+  .tenDayCardHigh, .tenDayCardLow {
+    width: 20%;
+  }
