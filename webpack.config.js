@@ -1,7 +1,6 @@
 module.exports = {
   entry: {
     main: ['babel-polyfill', './lib/index.js'],
-    test: ['babel-polyfill', 'mocha!./test/index.js'],
   },
   output: {
     path: __dirname,
