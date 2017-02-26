@@ -4,45 +4,72 @@
   #101010
   #dedede*/
   
+  @@font-face {
+    font-family: "Cabin", sans-serif;
+    src: url("https://fonts.googleapis.com/css?family=Cabin:400,500");
+  }
+  
   body {
-    font-family: "Cabin", sans-serif;;
+    font-family: "Cabin 400", sans-serif;;
   }
   
   .header {
     background-color: #101010;
+    padding: 20px 8px 20px;
   }
   
   h1 {
     font-size: 50px;
     color: #dedede;
-    padding: 20px 20px 10px;
+    font-family: "Cabin 500", sans-serif;
+    /*padding: 20px 20px 10px;*/
+  }
+  
+  .inputs {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px 0px;
   }
     
   .searchInput {
-    height: 30px;
-    margin: 10px 5px 20px;
+    height: 25px;
+    margin: 10px 0px 0px;
   }
   
   .searchSubmit {
-    height: 35px;
-    margin: 10px 5px 20px;
-
+    height: 31px;
+    margin: 9px 8px 0px;
     border: none;
-    background-color: #DEDEDE;
-    color: #101010;
+    background-color: #4C4C4C;
+    color: #DEDEDE;
     font-family: "Cabin", sans-serif;
   }
   
   .present {
     background-color: #4C4C4C;
     color: #DEDEDE;
-    padding: 20px 20px 15px;
-    /*margin: 10px;*/
+    /*border-top: 2px solid #999999;*/
+    padding: 20px 10px 20px;
     font-family: "Cabin", sans-serif;
+  }
+  
+  
+  
+  .presentCityDate {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5px 0px 5px;
   }
   
   .cityName {
     font-size: 20px;
+    /*padding: 5px;*/
+  }
+  
+  .longCond {
+    padding: 10px 0px 0px;
+    font-size: 15px;
   }
   
   .tempGroup {
@@ -55,25 +82,23 @@
   .currentTemp {
     font-size: 50px;
   }
-  
-  .longCond {
-    font-size: 15px;
-    margin-top: 5px;
-  }
-  
-  .sevenHourSection {
-    background-color: #999999;
-    padding: 10px 0px 10px;
+    
+  h2 {
+    background-color: #101010;
+    color: #DEDEDE;
+    /*border-top: 2px solid  #999999;*/
+    font-size: 20px;
+    padding: 25px 10px 10px;
+    
   }
   
   .sevenHourCard {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #DEDEDE;
-    margin: 0px 0px 15px;
-    padding: 5px 20px;
-    color: #4C4C4C;
+    background-color: #101010;
+    padding: 5px 20px 15px;
+    color: #DEDEDE;
   }
   
   img {
