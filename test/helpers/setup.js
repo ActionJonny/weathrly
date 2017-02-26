@@ -1,7 +1,9 @@
 require('babel-register')({
   presets: ["react", "es2015"]
 });
-require('babel-polyfill')
+require('babel-polyfill');
+
+// import testObject from './testObject';
 
 global.document = require('jsdom').jsdom(
   "<head><meta charset='UTF-8'><div class='application'></div></head>"
@@ -10,9 +12,9 @@ global.document = require('jsdom').jsdom(
 global.window = document.defaultView // if we have to go to the window (Event bubbling, referencing the window)
 global.navigator = window.navigator // if something is paginated this allows us to go from page to page
 
-// if (!global.window.localStorage) {
-//  localStorage = {
-//    getItem() { return '[]'; },
-//    setItem() {}
-//  }
-// }
+if (!global.window.localStorage) {
+ localStorage = {
+   getItem() { return '[]'; },
+   setItem() {}
+ }
+}

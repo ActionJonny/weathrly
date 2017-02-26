@@ -164,3 +164,9 @@
   .tenDayCardHigh, .tenDayCardLow {
     width: 20%;
   }
+  
+  @media (min-width: 600px) {
+    body {
+      /*border: 20px solid magenta;*/
+    }
+  }
