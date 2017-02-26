@@ -166,7 +166,62 @@
   }
   
   @media (min-width: 600px) {
-    body {
-      /*border: 20px solid magenta;*/
+    h1 {
+      font-size: 70px;
     }
-  }
+    
+    .searchInput {
+      width: 200px;
+    }
+    
+    .searchSubmit {
+      width: 50px;
+    }
+    
+    .present {
+      background-color: #4C4C4C;
+      color: #DEDEDE;
+      /*border-top: 2px solid #999999;*/
+      padding: 20px 10px 20px;
+      font-family: "Cabin", sans-serif;
+    }
+    
+    
+    
+    .presentCityDate {
+      /*display: flex;*/
+      /*align-items: baseline;*/
+      justify-content: flex-start;
+      padding: 5px 0px 5px;
+    }
+    
+    .currentDay {
+      padding-left: 30px;
+    }
+    
+    .cityName {
+      font-size: 30px;
+      padding-left: 10px;
+    }
+    
+    .currentDay {
+      font-size: 20px;
+    }
+    
+    .longCond {
+      padding: 10px 0px 0px 10px;
+      font-size: 15px;
+    }
+    
+    .tempGroup {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 10px 0px;
+    }
+    
+    .currentTemp {
+      font-size: 50px;
+      padding: 10px 80px 10px 10px;
+    }
+}
