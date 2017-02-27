@@ -31,7 +31,6 @@ describe('testing weathrly', ()=> {
     const wrapper = shallow(<Controls/>);
     assert.deepEqual(wrapper.state('locationInputField'), '[]');
     assert.deepEqual(wrapper.state('locationResults'), {});
-    
   });
   
   it('Controls should have a state describing location input field', ()=> {
@@ -44,7 +43,6 @@ describe('testing weathrly', ()=> {
     const wrapper = shallow(<Controls/>);
     assert(wrapper.state('locationResults'));
     assert.deepEqual(wrapper.state('locationResults'), {});
-    
   });
   
   it('Controls should have a header', ()=> {
@@ -79,15 +77,11 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.state().locationInputField, 'Boulder, CO');
   });
   
-  it.only('Controls submit button should call handleClickEvent event on click', ()=> {
-    sinon.spy(Controls.prototype, 'handleClickEvent');
+  it('Controls submit button should call handleClickEvent event on click', ()=> {
     const wrapper = mount(<Controls/>);
-    // let thisState = wrapper.state();
-    // wrapper.find('.searchInput').simulate('change', {target: {value:'Boulder, CO'}});
-    // thisState = wrapper.state();
-    // wrapper.find('.searchSubmit').simulate('click');
-    // thisState = wrapper.state();
-    assert.equal(wrapper.prototype.handleClickEvent.calledOnce, true);
+    sinon.spy(wrapper.instance(), 'handleClickEvent');
+    wrapper.find('.searchSubmit').simulate('click');
+    assert(wrapper.instance().handleClickEvent.calledOnce);
   });
   
   it('Weather should have present city and date', ()=> {
@@ -116,7 +110,6 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.longCond').text(), 'Sunshine and a few clouds. High 52F. NE winds shifting to W at 10 to 20 mph.');
   });
 
-  
   it('SevenHour should return seven individual hour cards', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
@@ -164,6 +157,7 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.hourCardCond').at(4).text(), 'Clear');
     assert.equal(wrapper.find('.hourCardCond').length, 7);
   });  
+  
   it('TenDay should return 10 cards for the 10 day forecast', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
@@ -180,7 +174,6 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.tenDayCardDate').at(1).text(), 'February 28');
     assert.equal(wrapper.find('.tenDayCardDate').at(4).text(), 'March 3');
     assert.equal(wrapper.find('.tenDayCardDate').length, 10);
-    console.log(wrapper.find('.tenDayCardDate').at(0).text());
   });
   
   it('TenDay should display cards with the high and low temp', ()=> {
