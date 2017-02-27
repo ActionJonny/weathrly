@@ -11,7 +11,6 @@ import tenDayCleaner from '../lib/helpers/tenDayCleaner';
 import testObject from './test-object';
 import SevenHourCard from '../lib/components/SevenHourCard';
 
-
 require('locus');
 
 describe('testing weathrly', ()=> {
@@ -142,5 +141,3 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.hourCardCond').length, 7);
   });  
 });
-
-
