@@ -1,6 +1,7 @@
 import { assert } from 'chai';
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
+import sinon from 'sinon';
 import Main from '../lib/components/Main';
 import Controls from '../lib/components/Controls';
 import Weather from '../lib/components/Weather';
@@ -46,11 +47,6 @@ describe('testing weathrly', ()=> {
     
   });
   
-  it.skip('Controls should allow user to input a search', ()=> {
-    const wrapper = shallow(<Controls/>);
-    assert.deepEqual()
-  });
-  
   it('Controls should have a header', ()=> {
     const wrapper = shallow(<Controls/>);
     assert.equal(wrapper.find('.header').length, 1);
@@ -65,6 +61,33 @@ describe('testing weathrly', ()=> {
   it('Controls should have a header for the ten day forecast', ()=> {
     const wrapper = shallow(<Controls/>);
     assert.equal(wrapper.find('h2').text(), 'Seven Hour Forecast')
+  });
+  
+  it('Controls should call componentDidMount on load', ()=> {
+    sinon.spy(Controls.prototype, 'componentDidMount');
+    const wrapper = mount(<Controls/>);
+    assert.equal(Controls.prototype.componentDidMount.calledOnce, true);
+  });
+  
+  it('Controls should accept a city and state from input field', ()=> {
+    const wrapper = mount(<Controls/>);
+    let thisState = wrapper.state();
+    wrapper.find('.searchInput').simulate('change', {target: {value:'Boulder, CO'}});
+    thisState = wrapper.state();
+    wrapper.find('.searchSubmit').simulate('click');
+    thisState = wrapper.state();
+    assert.equal(wrapper.state().locationInputField, 'Boulder, CO');
+  });
+  
+  it.only('Controls submit button should call handleClickEvent event on click', ()=> {
+    sinon.spy(Controls.prototype, 'handleClickEvent');
+    const wrapper = mount(<Controls/>);
+    // let thisState = wrapper.state();
+    // wrapper.find('.searchInput').simulate('change', {target: {value:'Boulder, CO'}});
+    // thisState = wrapper.state();
+    // wrapper.find('.searchSubmit').simulate('click');
+    // thisState = wrapper.state();
+    assert.equal(wrapper.prototype.handleClickEvent.calledOnce, true);
   });
   
   it('Weather should have present city and date', ()=> {
