@@ -97,6 +97,30 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.state().locationInputField, 'Boulder, MT');
   });
   
+  it('Controls should not display weather if an invalid search is entered', ()=> {
+    const wrapper = mount(<Controls/>);
+    let thisState = wrapper.state();
+    wrapper.find('.searchInput').simulate('change', {target: {value:'asdfasdfasdf'}});
+    wrapper.find('.searchSubmit').simulate('click');
+    
+    assert.equal(wrapper.find('.present').length, 0);
+    assert.equal(wrapper.find('.sevenHourCard').length, 0);
+    assert.equal(wrapper.find('.tenDayCard').length, 0);
+  });
+  
+  it.only('Controls should display an error if an invalid search is entered', ()=> {
+    const wrapper = mount(<Controls/>);
+    let thisState = wrapper.state();
+    wrapper.find('.searchInput').simulate('change', {target: {value:'asdfasdfasdf'}});
+    thisState = wrapper.state();
+
+    wrapper.find('.searchSubmit').simulate('click');
+    // thisState = wrapper.state();
+
+    
+    assert.equal(wrapper.find('.errorMessage').length, );    
+  })
+  
   it('Weather should have present city and date', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
