@@ -4,6 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 import Main from '../lib/components/Main';
 import Controls from '../lib/components/Controls';
 import SevenHour from '../lib/components/SevenHour';
+import testObject from './test-object.js'
 
 require('locus');
 
@@ -21,14 +22,16 @@ describe('testing weathrly', ()=> {
     assert.deepEqual(wrapper.state('locationInputField'), '[]');
     assert.deepEqual(wrapper.state('locationResults'), {});
   });
-  it.skip('should allow user to input a search', ()=> {
+  it.only('should allow user to input a search', ()=> {
     const wrapper = shallow(<Controls/>);
     assert.deepEqual()
   });
   it('should have a handle click function', ()=> {
-    const wrapper = shallow(<Controls/>);
-    console.log(wrapper.handleClickEvent);
+
+    const locationResults = dataCleaner(testObject)
+    const wrapper = shallow(<Weather locationResults={locationResults}/>);
+
+    console.log(wrapper);
+
   })
 })
-
-
