@@ -4,7 +4,7 @@
   #101010
   #dedede*/
   
-  @@font-face {
+  @font-face {
     font-family: "Cabin", sans-serif;
     src: url("https://fonts.googleapis.com/css?family=Cabin:400,500");
   }
@@ -168,10 +168,12 @@
   @media (min-width: 600px) {
     h1 {
       font-size: 70px;
+      padding-left: 10px;
     }
     
     .searchInput {
       width: 200px;
+      margin-left: 10px;
     }
     
     .searchSubmit {
@@ -217,11 +219,21 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 10px 0px;
+      margin: 10px 0px 10px 5px;
+
     }
     
     .currentTemp {
       font-size: 50px;
       padding: 10px 80px 10px 10px;
     }
+    
+    h2 {
+      padding:20px 20px;
+    }
+    
+    .sevenHourCard {
+      /*justify-content: space-around;*/
+    }
+    
 }
