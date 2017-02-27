@@ -3,7 +3,7 @@
   #999999
   #101010
   #dedede*/
-
+  
   body {
     font-family: 'Cabin', sans-serif;
   }
@@ -109,7 +109,7 @@
     width: 25%;
   }
 
-  .sevenHourCard .sevenHourTemp {
+  .sevenHourCard .hourCardTemp {
     width: 15%;
   }
 
@@ -172,6 +172,7 @@
   @media screen and (min-width: 600px) {
     h1 {
       font-size: 70px;
+      padding-left: 10px;
     }
 
     .header {
@@ -180,6 +181,7 @@
 
     .searchInput {
       width: 200px;
+      margin-left: 10px;
     }
 
     .searchSubmit {
@@ -227,7 +229,8 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin: 10px 0px;
+      margin: 10px 0px 10px 5px;
+
     }
 
     .currentTemp {
