@@ -8,6 +8,7 @@ import SevenHour from '../lib/components/SevenHour';
 import sevenHourCleaner from '../lib/helpers/sevenHourCleaner';
 import dataCleaner from '../lib/helpers/dataCleaner';
 import tenDayCleaner from '../lib/helpers/tenDayCleaner';
+import TenDay from '../lib/components/tenDay';
 import testObject from './test-object';
 import SevenHourCard from '../lib/components/SevenHourCard';
 
@@ -140,4 +141,45 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.hourCardCond').at(4).text(), 'Clear');
     assert.equal(wrapper.find('.hourCardCond').length, 7);
   });  
+  it('TenDay should return 10 cards for the 10 day forecast', ()=> {
+    const dataObject = testObject;
+    const locationResults = dataCleaner(dataObject);
+    const wrapper = mount(<TenDay locationResults={locationResults}/>);
+    
+    assert.equal(wrapper.find('.tenDayCard').length, 10);
+  });
+  
+  it('TenDay should display cards that have the date', ()=> {
+    const dataObject = testObject;
+    const locationResults = dataCleaner(dataObject);
+    const wrapper = mount(<TenDay locationResults={locationResults}/>);
+
+    assert.equal(wrapper.find('.tenDayCardDate').at(1).text(), 'February 28');
+    assert.equal(wrapper.find('.tenDayCardDate').at(4).text(), 'March 3');
+    assert.equal(wrapper.find('.tenDayCardDate').length, 10);
+    console.log(wrapper.find('.tenDayCardDate').at(0).text());
+  });
+  
+  it('TenDay should display cards with the high and low temp', ()=> {
+    const dataObject = testObject;
+    const locationResults = dataCleaner(dataObject);
+    const wrapper = mount(<TenDay locationResults={locationResults}/>);
+
+    assert.equal(wrapper.find('.tenHigh').at(0).text(), 'H 52°');
+    assert.equal(wrapper.find('.tenHigh').at(9).text(), 'H 60°');
+    assert.equal(wrapper.find('.tenLow').at(0).text(), 'L 29°');
+    assert.equal(wrapper.find('.tenLow').at(9).text(), 'L 37°');
+    assert.equal(wrapper.find('.tenHigh').length, 10);
+    assert.equal(wrapper.find('.tenLow').length, 10);
+  });
+  
+  it('TenDay should display cards with an image', ()=> {
+    const dataObject = testObject;
+    const locationResults = dataCleaner(dataObject);
+    const wrapper = mount(<TenDay locationResults={locationResults}/>);
+
+    assert.equal(wrapper.find('img').length, 10);
+    assert.equal(wrapper.find('img').at(3).length, 1);
+    assert.equal(wrapper.find('img').at(9).length, 1);
+  });
 });
