@@ -68,7 +68,7 @@ describe('testing weathrly', ()=> {
   });
   
   it('Controls should accept a city and state from input field', ()=> {
-    const wrapper = mount(<Controls/>);
+    const wrapper = shallow(<Controls/>);
     let thisState = wrapper.state();
     wrapper.find('.searchInput').simulate('change', {target: {value:'Boulder, CO'}});
     thisState = wrapper.state();
@@ -78,10 +78,24 @@ describe('testing weathrly', ()=> {
   });
   
   it('Controls submit button should call handleClickEvent event on click', ()=> {
-    const wrapper = mount(<Controls/>);
+    const wrapper = shallow(<Controls/>);
     sinon.spy(wrapper.instance(), 'handleClickEvent');
     wrapper.find('.searchSubmit').simulate('click');
     assert(wrapper.instance().handleClickEvent.calledOnce);
+  });
+  
+  it('Controls should allow changing the search location', ()=> {
+    const wrapper = shallow(<Controls/>);
+    let thisState = wrapper.state();
+    wrapper.find('.searchInput').simulate('change', {target: {value:'Boulder, CO'}});
+    wrapper.find('.searchSubmit').simulate('click');
+    thisState = wrapper.state();
+    assert.equal(wrapper.state().locationInputField, 'Boulder, CO');
+    
+    wrapper.find('.searchInput').simulate('change', {target: {value:'Boulder, MT'}});
+    wrapper.find('.searchSubmit').simulate('click');
+    thisState = wrapper.state();
+    assert.equal(wrapper.state().locationInputField, 'Boulder, MT');
   });
   
   it('Weather should have present city and date', ()=> {
