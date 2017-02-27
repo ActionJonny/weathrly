@@ -62,6 +62,11 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.header').children('.inputs').children('.searchSubmit').length, 1);
   });
   
+  it('Controls should have a header for the ten day forecast', ()=> {
+    const wrapper = shallow(<Controls/>);
+    assert.equal(wrapper.find('h2').text(), 'Seven Hour Forecast')
+  });
+  
   it('Weather should have present city and date', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
@@ -87,11 +92,7 @@ describe('testing weathrly', ()=> {
 
     assert.equal(wrapper.find('.longCond').text(), 'Sunshine and a few clouds. High 52F. NE winds shifting to W at 10 to 20 mph.');
   });
-  
-  it('Controls should have a header for the ten day forecast', ()=> {
-    const wrapper = shallow(<Controls/>);
-    assert.equal(wrapper.find('h2').text(), 'Seven Hour Forecast')
-  });
+
   
   it('SevenHour should return seven individual hour cards', ()=> {
     const dataObject = testObject;
@@ -101,7 +102,7 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.sevenHourCard').length, 7);
   });
   
-  it('Hour card should display the hour', ()=> {
+  it('SevenHour card should display the hour', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
     const wrapper = mount(<SevenHour locationResults={locationResults}/>);
@@ -111,7 +112,7 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.hourCardHour').length, 7);
   });
   
-  it('Hour card should display hourly temp', ()=> {
+  it('SevenHour card should display hourly temp', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
     const wrapper = mount(<SevenHour locationResults={locationResults}/>);
@@ -121,7 +122,7 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.hourCardTemp').length, 7);
   });
   
-  it('Hour cards should have an image', ()=> {
+  it('SevenHour cards should have an image', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
     const wrapper = mount(<SevenHour locationResults={locationResults}/>);
@@ -131,7 +132,7 @@ describe('testing weathrly', ()=> {
     assert.equal(wrapper.find('.sevenHourCard').find('img').length, 7);
   });
   
-  it('Hour cards should have a short condition description for the hour', ()=> {
+  it('SevenHour cards should have a short condition description for the hour', ()=> {
     const dataObject = testObject;
     const locationResults = dataCleaner(dataObject);
     const wrapper = mount(<SevenHour locationResults={locationResults}/>);
