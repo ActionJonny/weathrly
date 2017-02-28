@@ -1,240 +1,334 @@
-  body {
-    margin: 0 auto;
+  body
+{
     font-family: 'Cabin', sans-serif;
-    background-color: #292929;
+
     max-width: 1100px;
-  }
+    margin: 0 auto;
 
-  .header {
     background-color: #292929;
+}
+
+.header
+{
     padding: 20px 10px;
-  }
 
-  h1 {
+    background-color: #292929;
+}
+
+h1
+{
     font-size: 50px;
-    color: #fff;
     font-weight: 500;
+
     text-align: center;
-  }
 
-  .inputs {
-    display: flex;
-    margin-top: 10px;
-  }
-
-  .searchInput {
-    height: 30px;
-    width: 61%;
-    margin: 10px 2%;
-    border: none;
-    text-indent: 5px;
-    font-size: 15px;
-  }
-
-  .errorMessage {
-    margin-top: 10px;
     color: #fff;
-  }
+}
 
-  .searchSubmit {
-    height: 32px;
-    width: 31%;
+.inputs
+{
+    display: flex;
+
+    margin-top: 10px;
+}
+
+.searchInput
+{
+    font-size: 15px;
+
+    width: 61%;
+    height: 30px;
     margin: 10px 2%;
+
+    text-indent: 5px;
+
+    border: none;
+}
+
+.errorMessage
+{
+    margin-top: 10px;
+
+    color: #fff;
+}
+
+.searchSubmit
+{
+    font-size: 15px;
+
+    width: 31%;
+    height: 32px;
+    margin: 10px 2%;
+
+    color: #fff;
     border: 1px solid #fff;
     background-color: #292929;
-    color: #fff;
-    font-size: 15px;
-  }
+}
 
-  .present {
-    background-color: #101010;
-    color: #fff;
+.present
+{
     padding: 20px 30px;
-  }
 
-  .currentDay {
-    margin-right: 5%;
+    color: #fff;
+    background-color: #101010;
+}
+
+.currentDay
+{
     font-size: 20px;
-  }
 
-  .highLowPair {
     margin-right: 5%;
-    font-size: 30px;
-  }
+}
 
-  .presentCityDate {
+.highLowPair
+{
+    font-size: 30px;
+
+    margin-right: 5%;
+}
+
+.presentCityDate
+{
     display: flex;
+
+    padding: 5px 0;
+
     align-items: baseline;
     justify-content: space-between;
-    padding: 5px 0px;
-  }
+}
 
-  .cityName {
+.cityName
+{
     font-size: 20px;
-  }
+}
 
-  .longCond {
+.longCond
+{
+    font-size: 20px;
+
     padding-top: 10px;
-    font-size: 20px;
-  }
+}
 
-  .tempGroup {
+.tempGroup
+{
     display: flex;
+
+    margin: 10px 0;
+
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0px;
-  }
+}
 
-  .currentTemp {
+.currentTemp
+{
     font-size: 50px;
-  }
+}
 
-  h2,  h3 {
-    color: #fff;
+h2,
+h3
+{
     font-size: 20px;
-    text-align: center;
+
     padding: 10px 10px 10px;
-  }
 
-  .welcomeMessage {
-    background-color: #101010;
+    text-align: center;
+
     color: #fff;
-    font-size: 20px;
-    padding: 10px 10px;
-    text-align: center;
-  }
+}
 
-  .sevenHourCard, .tenDayCard {
+.welcomeMessage
+{
+    font-size: 20px;
+
+    padding: 10px 10px;
+
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    color: #fff;
     background-color: #101010;
+}
+
+.sevenHourCard,
+.tenDayCard
+{
+    display: flex;
+
     padding: 10px 20px;
+
+    text-align: center;
+
     color: #fff;
     border: 1px solid #292929;
-  }
+    background-color: #101010;
 
-  .sevenHourCard p {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sevenHourCard p
+{
     width: 25%;
-  }
+}
 
-  .sevenHourCard .hourCardTemp, .tenDayCard p {
+.sevenHourCard .hourCardTemp,
+.tenDayCard p
+{
     width: 15%;
-  }
+}
 
-  .sevenHourCard .hourCardCond {
+.sevenHourCard .hourCardCond
+{
     width: 35%;
-  }
+}
 
-  img {
-    height: 35px;
+img
+{
     width: 35px;
-  }
+    height: 35px;
+}
 
-  .tenDayCardDate {
+.tenDayCardDate
+{
     width: 20%;
-  }
+}
 
-  .tenDayCardImage {
+.tenDayCardImage
+{
     padding-left: 5%;
-  }
+}
 
-  .tenDayCardHigh, .tenDayCardLow {
+.tenDayCardHigh,
+.tenDayCardLow
+{
     width: 20%;
-  }
+}
 
-  @media screen and (min-width: 600px) {
-    body {
-      padding: 0 10px;
+@media screen and (min-width: 600px)
+{
+    body
+    {
+        padding: 0 10px;
     }
-    h1 {
-      font-size: 70px;
-    }
-
-    .present, input {
-      border-radius: 10px;
-    }
-
-    .present {
-      border: 1px solid #fff;
+    h1
+    {
+        font-size: 70px;
     }
 
-    h2, h3 {
-      font-size: 30px;
+    .present,
+    input
+    {
+        border-radius: 10px;
     }
 
-    h2 {
-      padding-top: 25px;
-      padding-bottom: 0px;
+    .present
+    {
+        border: 1px solid #fff;
     }
 
-    h3 {
-      padding-top: 15px;
-      padding-bottom: 10px;
-    }
-    .cityName {
-      font-size: 30px;
+    h2,
+    h3
+    {
+        font-size: 30px;
     }
 
-    .currentDay {
-      font-size: 20px;
+    h2
+    {
+        padding-top: 25px;
+        padding-bottom: 0;
     }
 
-    .currentTemp {
-      font-size: 50px;
+    h3
+    {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    .cityName
+    {
+        font-size: 30px;
     }
 
-    .sevenHourSection {
-      display: flex;
-      justify-content: space-between;
-      overflow-y: scroll;
-      padding: 10px;
+    .currentDay
+    {
+        font-size: 20px;
     }
 
-    .sevenHourSection .sevenHourCard {
-      flex-direction: column;
-      height: 150px;
-      border: 1px solid #fff;
-      border-radius: 10px;
+    .currentTemp
+    {
+        font-size: 50px;
     }
 
-    .sevenHourSection .sevenHourCard p {
-      width: 100px;
-      text-align: center;
+    .sevenHourSection
+    {
+        display: flex;
+        overflow-y: scroll;
+
+        padding: 10px;
+
+        justify-content: space-between;
     }
 
-    .sevenHourCard .hourCardTemp, .tenDayCard p {
-      width: 100%;
+    .sevenHourSection .sevenHourCard
+    {
+        flex-direction: column;
+
+        height: 150px;
+
+        border: 1px solid #fff;
+        border-radius: 10px;
+        margin: 0 10px;
     }
 
-    .tenDaySection {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      overflow-y: scroll;
-      font-size: 16px;
+    .sevenHourSection .sevenHourCard p
+    {
+        width: 100px;
+
+        text-align: center;
     }
 
-    .tenDaySection .tenDayCard {
-      flex-direction: column;
-      flex-basis: 18%;
-      text-align: center;
-      height: 175px;
-      padding: 20px 0;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border: 1px solid #fff;
+    .sevenHourCard .hourCardTemp,
+    .tenDayCard p
+    {
+        width: 100%;
     }
 
-    .tenDayCard .tenDayCardDate {
-      width: 100%;
+    .tenDaySection
+    {
+        font-size: 16px;
+
+        display: flex;
+        overflow-y: scroll;
+
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
-    .tenDayCard img {
-      display: block;
-      width: auto;
-      height: auto;
-      margin: 20% auto;
+    .tenDaySection .tenDayCard
+    {
+        flex-direction: column;
+
+        height: 175px;
+        margin-bottom: 20px;
+        padding: 20px 0;
+
+        text-align: center;
+
+        border: 1px solid #fff;
+        border-radius: 10px;
+
+        flex-basis: 18%;
+    }
+
+    .tenDayCard .tenDayCardDate
+    {
+        width: 100%;
+    }
+
+    .tenDayCard img
+    {
+        display: block;
+
+        width: auto;
+        height: auto;
+        margin: 20% auto;
     }
 }
