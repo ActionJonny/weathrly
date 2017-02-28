@@ -12,5 +12,6 @@
     "no-mixed-requires": [0],
     "no-underscore-dangle": [0],
     "arrow-body-style": ["error", "as-needed"],
+    "no-unused-vars": [0]
   }
 }
