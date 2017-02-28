@@ -216,12 +216,13 @@
       font-size: 16px;
     }
 
-    .tenDayCard {
+    .tenDaySection .tenDayCard {
       flex-direction: column;
       flex-basis: 18%;
       text-align: center;
       height: 175px;
       padding: 20px 0;
+      margin-bottom: 20px;
       border-radius: 10px;
       border: 1px solid #fff;
     }
