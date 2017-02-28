@@ -29,7 +29,6 @@ describe('testing weathrly', ()=> {
   
   it('Controls should have a default state', ()=> {
     const wrapper = shallow(<Controls/>);
-    assert.deepEqual(wrapper.state('locationInputField'), '[]');
     assert.deepEqual(wrapper.state('locationResults'), {});
   });
   
@@ -64,7 +63,7 @@ describe('testing weathrly', ()=> {
   it('Controls should call componentDidMount on load', ()=> {
     sinon.spy(Controls.prototype, 'componentDidMount');
     const wrapper = mount(<Controls/>);
-    assert.equal(Controls.prototype.componentDidMount.calledOnce, true);
+    assert(Controls.prototype.componentDidMount.calledOnce);
   });
   
   it('Controls should accept a city and state from input field', ()=> {
