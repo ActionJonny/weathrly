@@ -126,9 +126,13 @@
     width: 15%;
   }
 
+  .sevenHourCard .hourCardCond {
+    width: 35%;
+  }
+
   img {
-    width: auto;
-    height: auto;
+    height: 35px;
+    width: 35px;
   }
 
   .tenDayCardDate {
@@ -144,8 +148,15 @@
   }
 
   @media screen and (min-width: 600px) {
+    body {
+      padding: 0 10px;
+    }
     h1 {
       font-size: 70px;
+    }
+
+    .present, input {
+      border-radius: 10px;
     }
 
     h2, h3 {
@@ -153,12 +164,13 @@
     }
 
     h2 {
-      padding-top: 35px;
+      padding-top: 25px;
+      padding-bottom: 0px;
     }
 
     h3 {
-      padding-top: 25px;
-      padding-bottom: 20px;
+      padding-top: 15px;
+      padding-bottom: 10px;
     }
     .cityName {
       font-size: 30px;
@@ -180,9 +192,10 @@
 
     .sevenHourSection .sevenHourCard {
       flex-direction: column;
-      height: 200px;
-      border: 1px solid #4c4c4c;
+      height: 150px;
+      border: 5px solid #4c4c4c;
       margin: 10px 0;
+      border-radius: 10px;
     }
 
     .sevenHourSection .sevenHourCard p {
@@ -197,19 +210,19 @@
     .tenDaySection {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       overflow-y: scroll;
       font-size: 16px;
     }
 
     .tenDayCard {
       flex-direction: column;
-      flex-shrink: 1;
       flex-basis: 18%;
       text-align: center;
       border-bottom: 5px solid #4c4c4c;
       height: 175px;
       padding: 20px 0;
+      border-radius: 10px;
     }
 
     .tenDayCard .tenDayCardDate {
