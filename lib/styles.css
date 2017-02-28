@@ -196,7 +196,6 @@
       flex-direction: column;
       height: 150px;
       border: 1px solid #fff;
-      margin: 10px 0;
       border-radius: 10px;
     }
 
@@ -221,7 +220,6 @@
       flex-direction: column;
       flex-basis: 18%;
       text-align: center;
-      margin-bottom: 10px;
       height: 175px;
       padding: 20px 0;
       border-radius: 10px;
