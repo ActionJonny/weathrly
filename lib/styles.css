@@ -152,6 +152,14 @@
       font-size: 30px;
     }
 
+    h2 {
+      padding-top: 35px;
+    }
+
+    h3 {
+      padding-top: 25px;
+      padding-bottom: 20px;
+    }
     .cityName {
       font-size: 30px;
     }
