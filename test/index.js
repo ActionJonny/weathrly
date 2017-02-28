@@ -55,11 +55,6 @@ describe('testing weathrly', () => {
     assert.equal(wrapper.find('.header').children('.inputs').children('.searchSubmit').length, 1);
   });
 
-  it('Controls should have a header for the ten day forecast', () => {
-    const wrapper = shallow(<Controls/>);
-    assert.equal(wrapper.find('h2').text(), 'Seven Hour Forecast');
-  });
-
   it('Controls should call componentDidMount on load', () => {
     sinon.spy(Controls.prototype, 'componentDidMount');
     mount(<Controls/>);
