@@ -30746,7 +30746,11 @@
 	  _createClass(Main, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(_Controls2.default, { source: 'https://api.wunderground.com/api/e94636a61d05b634/forecast/hourly/forecast10day/conditions/geolookup/q/' });
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Controls2.default, { source: 'https://api.wunderground.com/api/e94636a61d05b634/forecast/hourly/forecast10day/conditions/geolookup/q/' })
+	      );
 	    }
 	  }]);
 
